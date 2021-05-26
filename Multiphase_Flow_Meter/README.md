@@ -1,5 +1,6 @@
+# To do list:
+
 - Add Sensors image
 - Add system image and P&ID
-- Add Arduino code
+- Add Notebook
 - Add Arduino connections
-- Add Python code

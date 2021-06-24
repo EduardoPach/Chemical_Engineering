@@ -19,7 +19,8 @@ Horizontal Pipe Flow Map (Axis in Volumetric Flowrate for Diameter = 8mm) Adapte
   <img
   src="https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/Flow_Map.png"
   alt="My System.">
-  <figcaption>Figure 2. Horizontal Pipe Flow Map (Axis in Volumetric Flowrate for Diameter = 8mm) Adapted from [Mandhane and Aziz](https://www.sciencedirect.com/science/article/abs/pii/0301932274900068)</figcaption>
+  <figcaption><a href="https://www.sciencedirect.com/science/article/abs/pii/0301932274900068">Figure 2. Horizontal Pipe Flow Map (Axis in Volumetric Flowrate for Diameter = 8mm) Adapted from Mandhane and Aziz</a></figcaption>
+  <a href="https://www.sciencedirect.com/science/article/abs/pii/0301932274900068">Figure 2. Horizontal Pipe Flow Map (Axis in Volumetric Flowrate for Diameter = 8mm) Adapted from Mandhane and Aziz</a>
 </figure>
 
 ## 2. Experiments

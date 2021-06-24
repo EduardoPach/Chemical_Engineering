@@ -19,7 +19,13 @@ Horizontal Pipe Flow Map (Axis in Volumetric Flowrate for Diameter = 8mm) Adapte
 
 To do the experiments a Flow loop was created using PU pipes, Water flow sensors, Rotameter, Vibration sensors, Accelerometer/Gyroscope sensor, Venturi tube + differential Pressure sensor and a Condutance sensor. Below is a picture of the system.
 
-![](https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/system.png)
+![](https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/system.jpg)
 
+<figure>
+  <img
+  src="https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/system.jpg"
+  alt="The beautiful MDN logo.">
+  <figcaption>Figure 3. My System</figcaption>
+</figure>
 
 ## 3. Results

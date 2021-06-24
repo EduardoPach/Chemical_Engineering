@@ -14,6 +14,8 @@ MPFMs are instruments used to measure flowrate of Multiphase Flows. They are abl
   <figcaption><a href="https://nfogm.no/wp-content/uploads/2014/02/MPFM_Handbook_Revision2_2005_ISBN-82-91341-89-3.pdf">Figure 1. Oil Well Example from Handbook of Multiphase Flow Metering</a></figcaption>
 </figure>
 
+
+
 The phase distribution inside equipaments, pipes, etc for Multiphase Flows is known as Flow patterns. These patterns depend on Operational conditions (Temperature, Pressure), Fluids properties (Viscosity, Surface tension, Density) and Geometric conditions (Pipe diameter and orientation). Diagrams were created in order to classify the Flow patterns. Those diagrams are often called as Flow Maps and there are different Flow Maps for different types of Flow (e.g. Liq-Liq and Liq-Gas) and Pipe orientation (i.e. Vertical, Horizontal and Angled).
 
 <figure>
@@ -23,9 +25,12 @@ The phase distribution inside equipaments, pipes, etc for Multiphase Flows is kn
   <figcaption><a href="https://www.sciencedirect.com/science/article/abs/pii/0301932274900068">Figure 2. Horizontal Pipe Flow Map (Axis in Volumetric Flowrate for Diameter = 8mm) Adapted from Mandhane and Aziz</a></figcaption>
 </figure>
 
+
+
+
 ## 2. Experiments
 
-To do the experiments a Flow loop was created using PU pipes, Water flow sensors, Rotameter, Vibration sensors, Accelerometer/Gyroscope sensor, Venturi tube + differential Pressure sensor and a Condutance sensor. Below is a picture of the system.
+To do the experiments a Flow loop was created using PU pipes, Water flow sensors, Rotameter, Vibration sensors, Accelerometer/Gyroscope sensor, Venturi tube + differential Pressure sensor, Condutance sensor and an Arduino Nano. Below is a picture of the system.
 
 <figure>
   <img
@@ -45,10 +50,10 @@ Since it's difficult to see from Figure 3 the system and grasp all it's details 
   <figcaption>Figure 4. System P&ID</figcaption>
 </figure>
 
-The idea behind our selected sensors is that different Flow pattenrs exhibit completly different oscillation patterns, which means that a different load will be apply to the pipe for different patterns, therefore measures like vibration, angular speed and acceleration of the pipe might be useful. Moreover, different patterns are also seen in the Venturi tube and Condutance measures. The table below maps each measurment TAG presented in Figure 4 to its respective sensor.
 
 
 <table class="center">
+  <caption>Table 1. Description of each TAG in the Figure 4</caption>
   <tr>
     <th>TAG</th>
     <th>Sensor</th> 
@@ -85,19 +90,19 @@ The idea behind our selected sensors is that different Flow pattenrs exhibit com
     <td>Couldn't find any relevant information about it</td>
   </tr>
    <tr>
-    <td>ST - 01,02,03</td>
+    <td>ST - 01/02/03</td>
     <td> <a href="https://pt.aliexpress.com/item/1005001621877471.html?spm=a2g0o.productlist.0.0.64bd1024uzy4pK&algo_pvid=null&algo_expid=null&btsid=0b0a556216219634375406463eeeee&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_"> GY-521 MPU-6050 </a> </td>
     <td>Angular velocity range +/- 250 °/s. (01: x, 02: y, 03: z)</td>
   </tr>
    <tr>
-    <td>GT - 01,02,03</td>
+    <td>GT - 01/02/03</td>
     <td><a href="https://pt.aliexpress.com/item/1005001621877471.html?spm=a2g0o.productlist.0.0.64bd1024uzy4pK&algo_pvid=null&algo_expid=null&btsid=0b0a556216219634375406463eeeee&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_"> GY-521 MPU-6050 </a> </td>
     <td>Acceleration range +/- 2g. (01: x, 02: y, 03: z)</td>
   </tr>
     <tr>
     <td>FT - 02 & CT - 01</td>
     <td> <a href="https://pt.aliexpress.com/item/32837942827.html?gclid=Cj0KCQjwwLKFBhDPARIsAPzPi-K-W0JMIPXvHhqNyVcwN94E0BFCfMCddK4aI-Mnw_yW6_rqSRDDKj4aAub7EALw_wcB"> DWS-MH-01 </a></td>
-    <td>Water flow sensor with Condutance sensor embedded.</td>
+    <td>Water flow sensor based on Hall Effect with Condutance sensor embedded.</td>
   </tr>
     </tr>
     <tr>
@@ -119,4 +124,31 @@ The idea behind our selected sensors is that different Flow pattenrs exhibit com
   </tr>
 </table>
 
+
+
+The idea behind our selected sensors is that different Flow pattenrs exhibit completly different oscillation patterns, which means that a different load will be apply to the pipe for different patterns, therefore measures like vibration, angular speed and acceleration of the pipe might be useful. Moreover, different patterns are also seen in the Venturi tube and Condutance measures. 
+
+
+Water is admitted in the system through B - 01 and parallel to that air is admitted through C - 01. Both of these lines have Flow rate instruments (FT - 01 and FG - 01) and needle valves to control these rates. After the lines are mixed the Multiphase Flow passes through the MPFM structure where it first goes through a Venturi tube, where the pressure difference is measured (PDT - 01), then it goes through three different vibration sensors (VT - 01/02/03), a Accelerometer/ Gyroscope, where the angular velocity (STs) and acceleration (GTs) on the three space axis are measured, and finally passes throguh another water flow meter with a condutance sensor embedded (FT - 02 and CT - 01).
+
+
+With the system ready to be used (every sensor connected to the Arduino and the [Arduino code](https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Code/Sensors_Readings.ino) running well) the only task left was to know the possible water/air flow ranges that could be tested in the system. So, just by opening and closing the FV - 01 and FV - 02 valves and looking the air and water volumetric Flow rates given by FG - 01 and FT - 01. An interatction between air flow and water flow was detected, which reduced the possible combinations of these variables, hence the water flow range was choosen to be between 0.2 and 0.7 L/min and the air flow rate between 1 and 5 L/min (with exception to water flow rates as 0.7 L/min due to their interaction). Figure 5 shows all the experiments made on a Flow Map in order to classify the pattern.
+
+
+
+<figure>
+  <img
+  src="https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/Flow_Map_with_Experimental_Points.png"
+  alt="My Flow Map with Experimental points.">
+  <figcaption>Figure 5. Flow Map for an 8 mm Horizontal Pipe. Green points are the experiments made and the Orange points are experiments that were re-classfied as Slug due to pattern visualization.  P&ID</figcaption>
+</figure>
+
+
 ## 3. Results
+
+
+
+
+
+
+

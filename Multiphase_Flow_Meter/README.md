@@ -15,17 +15,22 @@ The phase distribution inside equipaments, pipes, etc for Multiphase Flows is kn
 ![](https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/Flow_Map.png)
 Horizontal Pipe Flow Map (Axis in Volumetric Flowrate for Diameter = 8mm) Adapted from [Mandhane and Aziz](https://www.sciencedirect.com/science/article/abs/pii/0301932274900068)
 
+<figure>
+  <img
+  src="https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/Flow_Map.png"
+  alt="My System.">
+  <figcaption>Figure 2. Horizontal Pipe Flow Map (Axis in Volumetric Flowrate for Diameter = 8mm) Adapted from [Mandhane and Aziz](https://www.sciencedirect.com/science/article/abs/pii/0301932274900068)</figcaption>
+</figure>
+
 ## 2. Experiments
 
 To do the experiments a Flow loop was created using PU pipes, Water flow sensors, Rotameter, Vibration sensors, Accelerometer/Gyroscope sensor, Venturi tube + differential Pressure sensor and a Condutance sensor. Below is a picture of the system.
 
-![](https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/system.jpg)
-
 <figure>
   <img
   src="https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/system.jpg"
-  alt="The beautiful MDN logo.">
-  <figcaption>Figure 3. My System</figcaption>
+  alt="My System.">
+  <figcaption>Figure 3. Flow Loop</figcaption>
 </figure>
 
 ## 3. Results

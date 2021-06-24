@@ -48,7 +48,7 @@ Since it's difficult to see from Figure 3 the system and grasp all it's details 
 The idea behind our selected sensors is that different Flow pattenrs exhibit completly different oscillation patterns, which means that a different load will be apply to the pipe for different patterns, therefore measures like vibration, angular speed and acceleration of the pipe might be useful. Moreover, different patterns are also seen in the Venturi tube and Condutance measures. The table below maps each measurment TAG presented in Figure 4 to its respective sensor.
 
 
-<table style="width:100%">
+<table class="center">
   <tr>
     <th>TAG</th>
     <th>Sensor</th> 

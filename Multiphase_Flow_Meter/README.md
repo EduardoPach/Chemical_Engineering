@@ -26,7 +26,8 @@ The phase distribution inside equipaments, pipes, etc for Multiphase Flows is kn
   <figcaption><a href="https://www.sciencedirect.com/science/article/abs/pii/0301932274900068">Figure 2. Horizontal Pipe Flow Map (Axis in Volumetric Flowrate for Diameter = 8mm) Adapted from Mandhane and Aziz</a></figcaption>
 </figure>
 
-
+<p>&nbsp;</p> 
+<p></p> 
 
 
 ## 2. Experiments
@@ -40,7 +41,8 @@ To do the experiments a Flow loop was created using PU pipes, Water flow sensors
   <figcaption>Figure 3. Flow Loop</figcaption>
 </figure>
 
-
+<p>&nbsp;</p> 
+<p></p> 
 
 Since it's difficult to see from Figure 3 the system and grasp all it's details Figure 4 shows a draw of the system.
 
@@ -51,7 +53,8 @@ Since it's difficult to see from Figure 3 the system and grasp all it's details 
   <figcaption>Figure 4. System P&ID</figcaption>
 </figure>
 
-
+<p>&nbsp;</p> 
+<p></p> 
 
 <table class="center">
   <caption>Table 1. Description of each TAG in the Figure 4</caption>
@@ -144,6 +147,8 @@ With the system ready to be used (every sensor connected to the Arduino and the 
   <figcaption>Figure 5. Flow Map for an 8 mm Horizontal Pipe. Green points are the experiments made and the Orange points are experiments that were re-classfied as Slug due to pattern visualization.  P&ID</figcaption>
 </figure>
 
+<p>&nbsp;</p> 
+<p></p> 
 
 ## 3. Results
 

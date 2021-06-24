@@ -14,7 +14,8 @@ MPFMs are instruments used to measure flowrate of Multiphase Flows. They are abl
   <figcaption><a href="https://nfogm.no/wp-content/uploads/2014/02/MPFM_Handbook_Revision2_2005_ISBN-82-91341-89-3.pdf">Figure 1. Oil Well Example from Handbook of Multiphase Flow Metering</a></figcaption>
 </figure>
 
-
+<p>&nbsp;</p> 
+<p></p> 
 
 The phase distribution inside equipaments, pipes, etc for Multiphase Flows is known as Flow patterns. These patterns depend on Operational conditions (Temperature, Pressure), Fluids properties (Viscosity, Surface tension, Density) and Geometric conditions (Pipe diameter and orientation). Diagrams were created in order to classify the Flow patterns. Those diagrams are often called as Flow Maps and there are different Flow Maps for different types of Flow (e.g. Liq-Liq and Liq-Gas) and Pipe orientation (i.e. Vertical, Horizontal and Angled).
 

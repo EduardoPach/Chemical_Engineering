@@ -9,7 +9,7 @@ MPFMs are instruments used to measure flowrate of Multiphase Flows. They are abl
 
 <figure>
   <img
-  src="https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/with_without_MPFM_Oil.png"
+  src="Images/with_without_MPFM_Oil.png"
   alt="Example of well testing from the MPFM Handbook.">
   <figcaption><a href="https://nfogm.no/wp-content/uploads/2014/02/MPFM_Handbook_Revision2_2005_ISBN-82-91341-89-3.pdf">Figure 1. Oil Well Example from Handbook of Multiphase Flow Metering</a></figcaption>
 </figure>
@@ -21,7 +21,7 @@ The phase distribution inside equipaments, pipes, etc for Multiphase Flows is kn
 
 <figure>
   <img
-  src="https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/Flow_Map.png"
+  src="Images/Flow_Map.png"
   alt="Flow Map adapted from Mandhane.">
   <figcaption><a href="https://www.sciencedirect.com/science/article/abs/pii/0301932274900068">Figure 2. Horizontal Pipe Flow Map (Axis in Volumetric Flowrate for Diameter = 8mm) Adapted from Mandhane and Aziz</a></figcaption>
 </figure>
@@ -36,7 +36,7 @@ To do the experiments a Flow loop was created using PU pipes, Water flow sensors
 
 <figure>
   <img
-  src="https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/system.jpg"
+  src="Images/system.jpg"
   alt="My System.">
   <figcaption>Figure 3. Flow Loop</figcaption>
 </figure>
@@ -48,7 +48,7 @@ Since it's difficult to see from Figure 3 the system and grasp all it's details 
 
 <figure>
   <img
-  src="https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/P&ID.png"
+  src="Images/P&ID.png"
   alt="My System draw.">
   <figcaption>Figure 4. System P&ID</figcaption>
 </figure>
@@ -142,7 +142,7 @@ With the system ready to be used (every sensor connected to the Arduino and the 
 
 <figure>
   <img
-  src="https://github.com/EduardoPach/Chemical_Engineering/blob/main/Multiphase_Flow_Meter/Images/Flow_Map_with_Experimental_Points.png"
+  src="Images/Flow_Map_with_Experimental_Points.png"
   alt="My Flow Map with Experimental points.">
   <figcaption>Figure 5. Flow Map for an 8 mm Horizontal Pipe. Green points are the experiments made and the Orange points are experiments that were re-classfied as Slug due to pattern visualization.  P&ID</figcaption>
 </figure>
@@ -152,6 +152,48 @@ With the system ready to be used (every sensor connected to the Arduino and the 
 
 ## 3. Results
 
+In the Figure 6 it's possible to see a Slug flow from the experiments that were made.
+
+<figure>
+  <img
+  src="Images/slug.gif"
+  alt="Slug Flow in Slo-mo.">
+  <figcaption>Figure 6. Slug flow experiment </figcaption>
+</figure>
+
+<br>
+
+<figure>
+  <img
+  src="Images/Outliers.png"
+  alt="Outliers from instruments.">
+  <figcaption>Figure 7. Outliers for each sensor.</figcaption>
+</figure>
+
+<br>
+
+<figure>
+  <img
+  src="Images/MPFM_Num_Neurons.png"
+  alt="Selecting number of neurons.">
+  <figcaption>Figure 8. Correlation Coefficient versus number of neurons in the ANN.</figcaption>
+</figure>
+
+<br>
+
+<figure>
+  <img
+  src="Images/air_Optimal_MPFM.png"
+  alt="Selecting number of neurons.">
+  <figcaption>Figure 9. Air result summary.</figcaption>
+</figure>
+<br>
+<figure>
+  <img
+  src="Images/water_Optimal_MPFM.png"
+  alt="Selecting number of neurons.">
+  <figcaption>Figure 10. Water result summary.</figcaption>
+</figure>
 
 
 

@@ -10,3 +10,7 @@
 
 # [Multiphase Flow Meter (MPFM)](https://github.com/EduardoPach/Chemical_Engineering/tree/main/Multiphase_Flow_Meter)
 ![](Multiphase_Flow_Meter/Images/slug.gif)
+
+# [CSTR Simulation](https://github.com/EduardoPach/Chemical_Engineering/blob/main/CSTR/CSTR_Simulation.ipynb)
+
+![](CSTR/phase_plane_animation.gif)

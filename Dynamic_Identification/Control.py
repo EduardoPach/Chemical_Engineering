@@ -10,7 +10,7 @@ class Control:
   Classe para realizar aproximação de sistemas para FOPDT e realizar proposição 
   simulação de controladores.
   """
-  def __init__(self, u, y,data):
+  def __init__(self, u, y, data):
       self.u = data[u].values
       self.y = data[y].values
       self.t = (data.index-data.index[0]).values/np.timedelta64(1,"s")
@@ -56,25 +56,26 @@ class Control:
         obj = obj + (ym[i]-self.y[i])**2    
     return obj
   
-  def FOPDT_fit(self,Kp,taup,thetap,plot=False):
+  def FOPDT_fit(self, Kp, taup, thetap, plot=False, report=True):
     """
     Função que realiza o ajuste para obtenção dos parâmetros do modelo
     FOPDT.
     """
     x0 = [Kp,taup,thetap]
     Init = self.fopdt_objective(x0)
-    print("Fobj inicial: "+str(round(Init,2)))
+    print("Fobj inicial: "+str(round(Init,4)))
     self.solution = minimize(self.fopdt_objective,x0)
     x = self.solution.x
     self.Kp = x[0]
     self.taup = x[1]
     self.thetap = x[2]
-    print("Fobj final: "+str(round(self.fopdt_objective(x))))
-    print("Kp: {:.4f}".format(self.Kp))
-    print("taup: {:.4f}".format(self.taup))
-    print("thetap: {:.4f}".format(self.thetap))
+    if report:
+        fobj = self.fopdt_objective(x)
+        print(f"Fobj final: {fobj:.4f}")
+        print("Kp: {:.4f}".format(self.Kp))
+        print("taup: {:.4f}".format(self.taup))
+        print("thetap: {:.4f}".format(self.thetap))
     if plot:
-        
         ym1 = self.sim_fopdt(x0)
         ym2 = self.sim_fopdt(x)
         
@@ -87,10 +88,13 @@ class Control:
         plt.ylabel('Output')
         plt.legend(loc='best',bbox_to_anchor=(1,1))
         
-        at = AnchoredText("$K_p$: {:.2f}\n $\\tau_p$: {:.2f}\n $\\theta_p$: {:.2f}".format(self.Kp,self.taup,self.thetap),
-              prop=dict(size=10), frameon=True,
-              loc='lower right',
-              )
+        at = AnchoredText(
+            "$K_p$: {:.2f}\n $\\tau_p$: {:.2f}\n $\\theta_p$: {:.2f}".format(self.Kp,self.taup,self.thetap),
+            prop=dict(size=10), 
+            frameon=True,
+            loc='lower right',
+        )
+
         at.patch.set_boxstyle("round,pad=0.,rounding_size=0.2")
         ax1.add_artist(at)
         ax1.set_title("Identificação de Dinâmica",fontsize=15,fontweight="bold")

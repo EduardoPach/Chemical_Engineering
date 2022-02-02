@@ -7,7 +7,7 @@ from control import Control
 def main():
     URL_STEP = "https://raw.githubusercontent.com/EduardoPach/Chemical_Engineering/main/Dynamic_Identification/step.csv"
     URL_REAL = "https://raw.githubusercontent.com/EduardoPach/Chemical_Engineering/main/Dynamic_Identification/Exemplo_Dados_Reais.csv"
-    data = pd.read_csv(URL)
+    data = pd.read_csv(URL_STEP)
     data['date'] = pd.to_datetime(data['date'])
     data.set_index('date', inplace=True)
 
